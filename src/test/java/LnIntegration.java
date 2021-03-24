@@ -28,7 +28,7 @@ public class LnIntegration {
     }
 
     @ParameterizedTest
-    @ValueSource(doubles = {-2*Math.PI, -2.5, -Math.PI/2, -0.5, 0.0, 0.5, 1.5})
+    @ValueSource(doubles = {-Math.PI, -1.75, -Math.PI/2, -0.5, 0.0, 0.5, 1.0, 1.5})
     public void testIntegration(double x){
         double expected = piecewiseFunction.getStubValue(x);
         double actual = piecewiseFunction.calculate(x);
